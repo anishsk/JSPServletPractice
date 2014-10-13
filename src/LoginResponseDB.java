@@ -73,14 +73,13 @@ public class LoginResponseDB extends HttpServlet {
 			sql = "SELECT pass from logincreden where uname='" + uname + "';";
 	        rs = stmt.executeQuery(sql);
 	        if(rs.isBeforeFirst()){
-	        	while(rs.next()){
-	        		if(rs.getString("pass").compareTo(pass)==0){
+	        	if(rs.next()){
+	        	    if(rs.getString("pass").compareTo(pass)==0){
 	        			request.setAttribute("uname", uname);
 	        			request.getRequestDispatcher("/Successful").forward(request, response);
 	        		}
-	        		else
-	        		{
-	        			request.getRequestDispatcher("/FailedLogin").forward(request, response);
+	        		else{
+	        				request.getRequestDispatcher("/FailedLogin").forward(request, response);
 	        		}
 	        	}
 	        }else{
