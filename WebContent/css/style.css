@@ -1,5 +1,6 @@
 @CHARSET "ISO-8859-1";
-.container{
+
+.container {
 	border: 1px #e5e5e5 solid;
 	width: 300px;
 	height: 110px;
@@ -7,7 +8,9 @@
 	vertical-align: middle;
 	text-align: center;
 }
-#logincontainer form input[type="submit"],input[type="text"], input[type="password"] {
+
+#logincontainer form input[type="submit"],input[type="text"],input[type="password"]
+	{
 	background-color: #e5e5e5;
 	margin: 5px;
 	padding: 4px;
@@ -18,9 +21,9 @@
 }
 
 #logincontainer form input[type="submit"] {
-	width:290px;
+	width: 290px;
 	height: 20px;
 	cursor: pointer;
 	color: white;
-	background-color:blue;
+	background-color: blue;
 }
